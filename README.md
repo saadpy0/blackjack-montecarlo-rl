@@ -1,6 +1,29 @@
 # AI Blackjack Game – Monte Carlo Reinforcement Learning
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)
+
 This project implements an AI agent that learns optimal blackjack strategies using Monte Carlo reinforcement learning. The environment mimics real casino conditions: the agent has only partial knowledge of the deck, faces realistic shuffling, and is limited in card counting ability. The agent is trained and evaluated using Python, NumPy, and OpenAI Gym.
+
+---
+
+## Visualizations
+
+### Learning Curve
+![Learning Curve](learning_curve.png)
+*Shows the agent’s win, loss, and draw rates over 1,000,000 training episodes. The win rate rises and stabilizes as the agent learns an optimal policy.*
+
+### Policy Heatmaps
+**No Usable Ace:**
+![Policy Heatmap (No Usable Ace)](policy_heatmap_usable_ace_False.png)
+
+**Usable Ace:**
+![Policy Heatmap (Usable Ace)](policy_heatmap_usable_ace_True.png)
+
+*These heatmaps visualize the learned policy: for each player sum and dealer card, the color shows whether the agent prefers to hit (1) or stick (0). Patterns match human basic strategy, with more sticking at higher sums.*
+
+---
 
 ## Project Description
 - **Custom Environment:** The Blackjack environment is designed to be realistic, with partial deck knowledge, card counting limits, and casino-style shuffling. The agent does not have perfect information, making the challenge closer to real-world play.
